@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MPC - Cảng MPEC</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="page.css">
+    <title>Chi tiết Dịch vụ - MPCC</title>
+    <link rel="stylesheet" href="dich-vu.css">
+    <link rel="stylesheet" href="chi-tiet-dich-vu.css">
     <link rel="stylesheet" href="../../components/Header.css">
     <link rel="stylesheet" href="../../components/Footer.css">
-    <link rel="stylesheet" href="../../components/Sidebar.css">
+    <!-- Thêm icon nếu cần -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
+
 <body>
     <!-- Header -->
     <header class="mpc-header">
@@ -18,19 +20,19 @@
             <div class="header-logo">
                 <img src="../../assets/logo.png" alt="MPC Logo" class="logo-image">
             </div>
-            
+
             <button class="mobile-menu-toggle" aria-label="Toggle menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
-            
+
             <nav class="header-nav">
                 <ul class="nav-menu">
-                    <li><a href="home.html" class="active">TRANG CHỦ</a></li>
+                    <li><a href="../Trang chủ/home.html">TRANG CHỦ</a></li>
                     <li><a href="#gioi-thieu">VỀ MPC</a></li>
                     <li><a href="../Cơ sở hạ tầng/ha-tang.html">CƠ SỞ HẠ TẦNG</a></li>
-                    <li><a href="../Dịch vụ/dich-vu.html">DỊCH VỤ</a></li>
+                    <li><a href="dich-vu.html" class="active">DỊCH VỤ</a></li>
                     <li><a href="../Tin tức/tin-tuc.html">TIN TỨC</a></li>
                     <li><a href="#tuyen-dung">TUYỂN DỤNG</a></li>
                     <li><a href="#lien-he">LIÊN HỆ</a></li>
@@ -45,43 +47,75 @@
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Hero Section -->
-        <section class="hero-section">
-            <div class="hero-overlay"></div>
-            <img src="../../assets/home-banner.png" alt="Port Hero">
-        </section>
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+        <div class="hero-overlay"></div>
+        <img src="../../assets/home-banner.png" alt="Dịch vụ Banner">
+    </section>
 
-        <!-- About Section -->
-        <section class="about-section">
-            <div class="about-container">
-                <div class="about-left">
-                    <div class="about-label">CHÀO MỪNG BẠN ĐẾN VỚI</div>
-                    <h2 class="about-title">CÔNG TY CỔ PHẦN<br>CẢNG MIPEC</h2>
+    <!-- Main Content -->
+    <main class="service-detail-main">
+        <div class="container detail-container">
+            <!-- Sidebar -->
+            <aside class="service-sidebar">
+                <h3 class="sidebar-title">CÁC DỊCH VỤ KHÁC</h3>
+                <ul class="sidebar-menu">
+                    <li><a href="#">Dịch vụ vận tải Container</a></li>
+                    <li class="active"><a href="#">Dịch vụ khai thác cảng</a></li>
+                    <li><a href="#">Dịch vụ khai thác kho bãi</a></li>
+                    <li><a href="#">Dịch vụ hàng hải</a></li>
+                    <li><a href="#">Dịch vụ vận tải Container</a></li>
+                    <li><a href="#">Dịch vụ khai thác cảng</a></li>
+                    <li><a href="#">Dịch vụ khai thác kho bãi</a></li>
+                    <li><a href="#">Dịch vụ hàng hải</a></li>
+                </ul>
+            </aside>
+
+            <!-- Main Content Area -->
+            <div class="service-content-area">
+                <h1 class="detail-title">DỊCH VỤ KHAI THÁC CẢNG</h1>
+
+                <div class="detail-description">
+                    <p>Công ty cổ phần cảng MIPEC (tên giao dịch MPC) là nhà khai thác Bến cảng MPC Port.</p>
+                    <p>Bến cảng MPC Port có vị trí chiến lược nằm tại hạ lưu sông Cấm, gần cửa biển trên Bán đảo Đình
+                        Vũ, thuộc Khu kinh tế Đình Vũ - Cát Hải, thành phố Hải Phòng. Bến cảng MPC Port có vị trí thuận
+                        tiện kết nối giao thông, có vùng quay trở và độ sâu trước bến lớn và thường xuyên được nạo vét;
+                        cơ sở hạ tầng, trang thiết bị được đầu tư hiện đại và đồng bộ; được áp dụng hệ thống quản trị
+                        doanh nghiệp, hệ thống quản lý khai thác cảng tiên tiến và đội ngũ nhân sự chuyên nghiệp.</p>
                 </div>
-                <div class="about-right">
-                    <div class="about-text">
-                        <p>
-                            Tháng 5 năm 2020 Cục Hàng hải Việt nam đã cấp Quyết định cảng cho nhà đầu tư 
-                            cảng MPC Port. Bến cảng MPC Port là bến cảng chuyên dụng cho tàu chở 
-                            hàng container, có khả năng phục vụ các tàu có trọng tải đến 50.000 DWT, với 
-                            chiều dài cầu cảng là 280 m và vùng nước trước cầu cảng chuyển tuyến đến Bắc Mỹ 
-                            cũng như Châu Âu. Ngay từ tháng 6 năm 2020 chúng tôi container chuyển tuyến đến 
-                            Bắc Mỹ cũng như Châu Âu. Ngay từ tháng 6 năm 2020 chúng tôi đã cung cấp dịch vụ 
-                            bốc xếp container chuyển tuyến đến Bắc Mỹ cũng như Châu Âu. Ngay từ tháng 6 năm 
-                            2020 chúng tôi đã cung cấp dịch vụ bốc xếp MPC Port, chính thức đưa vào hoạt 
-                            động cảng biến Việt Nam nhóm cảng biển Hải Phòng.
-                        </p>
+
+                <div class="detail-slider">
+                    <img src="../../assets/home-banner.png" alt="MPC Port Khai Thác Cảng">
+                    <button class="slider-arrow left" aria-label="Previous image"><i
+                            class="bi bi-chevron-left"></i></button>
+                    <button class="slider-arrow right" aria-label="Next image"><i
+                            class="bi bi-chevron-right"></i></button>
+                    <div class="slider-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
                     </div>
-                    <button class="read-more-btn">Tìm hiểu thêm</button>
+                </div>
+
+                <div class="detail-bottom-text">
+                    <p>Cảng MIPEC là cảng tổng hợp có thể đón tàu container có sức chở đến 1.800 TEU, tàu chở hàng nặng,
+                        hàng bách hóa có trọng tải đến 15.000 DWT và tàu chở hàng rời có trọng tải đến 20.000 DWT. Năm
+                        2013 Cảng MIPEC đã đón tàu YM INVENTIVE có sức chở 1.805 TEU vào khai thác an toàn. Mỗi năm hàng
+                        hóa qua cảng MIPEC đạt hơn 300.000 TEU.</p>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <!-- Port Image Section -->
-        <section class="port-image-section">
-            <img src="../../assets/home-banner.png" alt="Port View" class="port-full-image">
+        <!-- Contact Block -->
+        <section class="contact-banner">
+            <div class="contact-banner-container">
+                <p class="contact-banner-text">Liên hệ với chúng tôi để được hỗ trợ</p>
+                <div class="contact-banner-hotline">
+                    <i class="bi bi-telephone-fill"></i>
+                    <span>Hotline 02253 280 038</span>
+                </div>
+            </div>
         </section>
     </main>
 
@@ -92,7 +126,7 @@
                 <!-- Logo & Description -->
                 <div class="footer-column footer-about">
                     <div class="footer-logo">
-                        <img src="./public/logo.png" alt="MPC Logo" width="80" height="80">
+                        <img src="../../assets/logo.png" alt="MPC Logo" width="80" height="80">
                     </div>
                     <p class="footer-description">
                         Công ty cổ phần cảng MPEC (tên giao dịch MPC) là nhà khai thác Bến cảng MPC Port.
@@ -113,9 +147,9 @@
                     <h4 class="footer-title">Danh mục</h4>
                     <ul class="footer-menu">
                         <li><a href="#gioi-thieu">Về MPC</a></li>
-                        <li><a href="ha-tang.html">Cơ sở hạ tầng</a></li>
-                        <li><a href="#dich-vu">Dịch vụ</a></li>
-                        <li><a href="#tin-tuc">Tin tức</a></li>
+                        <li><a href="../Cơ sở hạ tầng/ha-tang.html">Cơ sở hạ tầng</a></li>
+                        <li><a href="dich-vu.html">Dịch vụ</a></li>
+                        <li><a href="../Tin tức/tin-tuc.html">Tin tức</a></li>
                     </ul>
                 </div>
 
@@ -159,34 +193,32 @@
             </div>
         </div>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         // Mobile Menu Toggle
         const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
         const headerNav = document.querySelector('.header-nav');
-        
+
         if (mobileMenuToggle && headerNav) {
-            mobileMenuToggle.addEventListener('click', function() {
+            mobileMenuToggle.addEventListener('click', function () {
                 this.classList.toggle('active');
                 headerNav.classList.toggle('show');
             });
-            
+
             // Close menu when clicking outside
-            document.addEventListener('click', function(event) {
+            document.addEventListener('click', function (event) {
                 const isClickInsideMenu = headerNav.contains(event.target);
                 const isClickOnToggle = mobileMenuToggle.contains(event.target);
-                
+
                 if (!isClickInsideMenu && !isClickOnToggle && headerNav.classList.contains('show')) {
                     mobileMenuToggle.classList.remove('active');
                     headerNav.classList.remove('show');
                 }
             });
-            
+
             // Close menu when clicking on a link
             const navLinks = document.querySelectorAll('.nav-menu a');
             navLinks.forEach(link => {
-                link.addEventListener('click', function() {
+                link.addEventListener('click', function () {
                     mobileMenuToggle.classList.remove('active');
                     headerNav.classList.remove('show');
                 });
@@ -194,4 +226,5 @@
         }
     </script>
 </body>
+
 </html>
