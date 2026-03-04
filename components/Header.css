@@ -40,11 +40,13 @@
     height: 50px;
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
 }
+
 .logo-image {
     width: 59px;
     height: 61px;
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
 }
+
 .header-nav {
     flex: 1;
     display: flex;
@@ -85,6 +87,72 @@
 
 .nav-menu li a.active {
     background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Submenu Styles */
+.header-nav .sub-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    min-width: 280px;
+    padding: 10px 0;
+    margin: 0;
+    list-style: none;
+    border-radius: 6px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.25s ease;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.header-nav .menu-item:hover .sub-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.header-nav .sub-menu li {
+    border-bottom: 1px solid #eee;
+}
+
+.header-nav .sub-menu li:last-child {
+    border-bottom: none;
+}
+
+.header-nav .sub-menu li a {
+    display: block;
+    padding: 12px 24px;
+    color: #000000;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 26px;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    text-shadow: none;
+    text-transform: none;
+    border-radius: 0;
+}
+
+.header-nav .sub-menu li a:hover {
+    background-color: #f2f2f2;
+    color: #DF1F28;
+    padding-left: 32px;
+}
+
+.header-nav .menu-item>a::after {
+    content: " ▼";
+    font-size: 0.8em;
+    margin-left: 4px;
+    opacity: 0.7;
+    transition: transform 0.2s;
+}
+
+.header-nav .menu-item:hover>a::after {
+    transform: rotate(180deg);
 }
 
 .header-language {
@@ -165,7 +233,7 @@
         padding: 0 20px;
         height: 65px;
     }
-    
+
     .header-logo {
         display: flex;
         align-items: center;
@@ -196,7 +264,7 @@
         order: 3;
         margin-left: auto;
     }
-    
+
     .header-language {
         padding: 7px 14px;
         order: 2;
@@ -228,13 +296,58 @@
         font-size: 14px;
     }
 
+    /* Fix: menu-item > a (DỊCH VỤ) cũng phải có màu đậm */
+    .header-nav .menu-item>a {
+        color: #333 !important;
+        text-shadow: none !important;
+    }
+
     .nav-menu li a:hover {
         background-color: #f8f8f8;
+        color: #DF1F28;
     }
 
     .nav-menu li a.active {
         background-color: #f0f0f0;
         color: #e74c3c;
+    }
+
+    /* Submenu Mobile Styles */
+    .header-nav .sub-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        background: #f8f8f8;
+        min-width: 100%;
+        padding: 0;
+        border-radius: 0;
+        display: none;
+    }
+
+    .header-nav .sub-menu.show {
+        display: block;
+    }
+
+    .header-nav .sub-menu li {
+        border-bottom: 1px solid #e8e8e8;
+    }
+
+    .header-nav .sub-menu li a {
+        padding: 12px 25px 12px 45px;
+        font-size: 13px;
+        color: #555;
+    }
+
+    .header-nav .sub-menu li a:hover {
+        background-color: #efefef;
+        color: #DF1F28;
+        padding-left: 50px;
+    }
+
+    .header-nav .menu-item>a::after {
+        float: right;
     }
 
     .logo-image {
@@ -253,7 +366,7 @@
         top: 60px;
         max-height: calc(100vh - 60px);
     }
-    
+
     .header-language {
         margin-right: 12px;
     }
