@@ -1,4 +1,3 @@
-
 .mpc-header {
     background: transparent;
     border-bottom: none;
@@ -144,7 +143,7 @@
     padding-left: 32px;
 }
 
-.header-nav .menu-item > a::after {
+.header-nav .menu-item>a::after {
     content: " ▼";
     font-size: 0.8em;
     margin-left: 4px;
@@ -152,7 +151,7 @@
     transition: transform 0.2s;
 }
 
-.header-nav .menu-item:hover > a::after {
+.header-nav .menu-item:hover>a::after {
     transform: rotate(180deg);
 }
 
@@ -297,8 +296,15 @@
         font-size: 14px;
     }
 
+    /* Fix: menu-item > a (DỊCH VỤ) cũng phải có màu đậm */
+    .header-nav .menu-item>a {
+        color: #333 !important;
+        text-shadow: none !important;
+    }
+
     .nav-menu li a:hover {
         background-color: #f8f8f8;
+        color: #DF1F28;
     }
 
     .nav-menu li a.active {
@@ -320,7 +326,7 @@
         display: none;
     }
 
-    .header-nav .menu-item:hover .sub-menu {
+    .header-nav .sub-menu.show {
         display: block;
     }
 
@@ -340,7 +346,7 @@
         padding-left: 50px;
     }
 
-    .header-nav .menu-item > a::after {
+    .header-nav .menu-item>a::after {
         float: right;
     }
 
