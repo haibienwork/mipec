@@ -399,9 +399,12 @@
 
 /* Image right */
 .facility-image {
-    /* display: flex; */
-    /* align-items: center; */
-    /* justify-content: center; */
+    overflow: visible;
+    padding-right: 0 !important;
+}
+
+.facility .container-fluid {
+    padding-right: 0;
 }
 
 .image-wrapper {
@@ -410,7 +413,7 @@
 }
 
 .image-wrapper img {
-    width: 1067px;
+    width: calc(100% + 80px);
     max-width: none;
     height: 636px;
     object-fit: cover;
@@ -899,8 +902,41 @@
         width: 200px;
     }
 
+    .tab-item.active {
+        font-size: 20px;
+    }
+
+    .tab-item.active::before {
+        width: 140px;
+        left: -35px;
+    }
+
+    /* Tab content */
+    .tab-pane ul li {
+        font-size: 18px;
+        line-height: 28px;
+        margin-bottom: 4px;
+    }
+
+    .read-more-btn-facility {
+        font-size: 18px;
+    }
+
+    /* Thumbs: override inline padding-left */
+    .thumbs {
+        padding-left: 0 !important;
+        gap: 14px;
+        justify-content: center;
+        margin-top: 20px !important;
+    }
+
+    .thumb {
+        width: 140px;
+        height: 86px;
+    }
+
     .image-wrapper img {
-        width: 1320px;
+        width: calc(100% + 80px);
         height: 790px;
     }
 
@@ -1020,8 +1056,46 @@
         line-height: 54px;
     }
 
+    .tab-item {
+        font-size: 16px;
+        width: 180px;
+    }
+
+    .tab-item.active {
+        font-size: 18px;
+    }
+
+    .tab-item.active::before {
+        width: 130px;
+        left: -32px;
+    }
+
+    /* Tab content */
+    .tab-pane ul li {
+        font-size: 17px;
+        line-height: 27px;
+        margin-bottom: 3px;
+    }
+
+    .read-more-btn-facility {
+        font-size: 16px;
+    }
+
+    /* Thumbs: override inline padding-left */
+    .thumbs {
+        padding-left: 0 !important;
+        gap: 12px;
+        justify-content: center;
+        margin-top: 18px !important;
+    }
+
+    .thumb {
+        width: 120px;
+        height: 74px;
+    }
+
     .image-wrapper img {
-        width: 1190px;
+        width: calc(100% + 80px);
         height: 710px;
     }
 
@@ -1082,13 +1156,37 @@
     }
 
     .image-wrapper img {
-        width: 1067px;
+        width: calc(100% + 80px);
         height: 636px;
     }
 
     .nav-bar {
         width: 868px;
         height: 70px;
+    }
+
+    /* Tab content */
+    .tab-pane ul li {
+        font-size: 16px;
+        line-height: 26px;
+        margin-bottom: 3px;
+    }
+
+    .read-more-btn-facility {
+        font-size: 15px;
+    }
+
+    /* Thumbs: override inline padding-left */
+    .thumbs {
+        padding-left: 0 !important;
+        gap: 10px;
+        justify-content: center;
+        margin-top: 16px !important;
+    }
+
+    .thumb {
+        width: 110px;
+        height: 68px;
     }
 }
 
@@ -1194,9 +1292,18 @@
         line-height: 24px;
     }
 
+    .facility {
+        padding-top: 30px !important;
+        padding-bottom: 30px !important;
+    }
+
+    .facility .text-center.mb-5 {
+        margin-bottom: 20px !important;
+    }
+
     .facility-left {
-        padding: 50px 40px;
-        min-height: 520px;
+        padding: 40px 30px;
+        min-height: auto;
     }
 
     .facility-title {
@@ -1204,16 +1311,70 @@
         line-height: 40px;
     }
 
+    /* Tabs: keep vertical at this breakpoint (side-by-side layout) */
     .tab-item {
+        font-size: 13px;
+        width: 130px;
+    }
+
+    .tab-item.active {
         font-size: 14px;
-        width: 140px;
+    }
+
+    .tab-item.active::before {
+        width: 90px;
+        left: -22px;
+    }
+
+    /* Tab content */
+    .tab-pane ul {
+        padding-left: 18px;
+    }
+
+    .tab-pane ul li {
+        font-size: 14px;
+        line-height: 23px;
+        margin-bottom: 2px;
+    }
+
+    /* Facility bottom */
+    .facility-bottom-content {
+        margin-top: 16px !important;
+    }
+
+    .read-more-btn-facility {
+        padding: 8px 60px 8px 0;
+        font-size: 14px;
+    }
+
+    /* Thumbs: override inline padding-left */
+    .thumbs {
+        padding-left: 0 !important;
+        gap: 8px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 14px !important;
+    }
+
+    .thumb {
+        width: 80px;
+        height: 50px;
+    }
+
+    /* Image */
+    .image-wrapper {
+        padding-top: 60px;
     }
 
     .image-wrapper img {
-        width: 100%;
-        max-width: 920px;
+        width: calc(100% + 30px);
+        max-width: none;
         height: auto;
         left: -30px;
+    }
+
+    .next-btn-service {
+        right: 15px;
     }
 
     .wrapper {
@@ -1384,8 +1545,17 @@
         font-size: 15px;
     }
 
+    .facility {
+        padding-top: 25px !important;
+        padding-bottom: 25px !important;
+    }
+
+    .facility .text-center.mb-5 {
+        margin-bottom: 18px !important;
+    }
+
     .facility-left {
-        padding: 38px 28px;
+        padding: 30px 24px;
         min-height: auto;
     }
 
@@ -1394,38 +1564,109 @@
         line-height: 34px;
     }
 
+    /* Force inner columns to stack on tablet */
+    .facility-left .col-md-4,
+    .facility-left .col-md-8 {
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* Tabs: horizontal scrollable */
+    .facility-tabs {
+        flex-direction: row !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 0;
+        padding-right: 0;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        white-space: nowrap;
+        padding-bottom: 10px;
+        justify-content: flex-start;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        margin-bottom: 14px;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .facility-tabs::-webkit-scrollbar {
+        display: none;
+    }
+
     .tab-item {
         font-size: 13px;
         width: auto;
+        padding: 6px 14px;
+        flex-shrink: 0;
+        white-space: nowrap;
     }
 
     .tab-item.active {
-        font-size: 15px;
+        font-size: 14px;
+        font-weight: 700;
     }
 
     .tab-item.active::before {
-        width: 100px;
-        left: -25px;
+        width: 0;
+        display: none;
+    }
+
+    /* Tab content */
+    .tab-pane ul {
+        padding-left: 20px;
+    }
+
+    .tab-pane ul li {
+        font-size: 15px;
+        line-height: 24px;
+        margin-bottom: 2px;
+    }
+
+    /* Facility bottom */
+    .facility-bottom-content {
+        margin-top: 18px !important;
     }
 
     .read-more-btn-facility {
-        padding: 8px 80px 8px 0;
+        padding: 8px 0;
         font-size: 14px;
+        justify-content: center;
+        width: 100%;
+    }
+
+    /* Thumbs: override inline padding-left */
+    .thumbs {
+        padding-left: 0 !important;
+        gap: 8px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 12px !important;
+    }
+
+    .thumb {
+        width: 85px;
+        height: 52px;
+    }
+
+    /* Image */
+    .facility-image {
+        margin-top: 8px;
     }
 
     .image-wrapper {
-        padding-top: 50px;
+        padding-top: 20px;
     }
 
     .image-wrapper img {
         width: 100%;
         height: auto;
         left: 0;
-        max-width: 100%;
+        max-width: none;
     }
 
     .next-btn-service {
-        right: 20px;
+        right: 15px;
     }
 
     .wrapper {
@@ -1627,8 +1868,17 @@
         margin-top: 18px;
     }
 
+    .facility {
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
+    }
+
+    .facility .text-center.mb-5 {
+        margin-bottom: 15px !important;
+    }
+
     .facility-left {
-        padding: 22px 15px;
+        padding: 24px 16px;
         min-height: auto;
     }
 
@@ -1637,45 +1887,85 @@
         line-height: 29px;
     }
 
+    /* Tabs: horizontal scrollable on mobile */
     .facility-tabs {
-        gap: 9px;
+        flex-direction: row !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 0;
+        padding-right: 0;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        white-space: nowrap;
+        padding-bottom: 10px;
+        justify-content: flex-start;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        margin-bottom: 12px;
+        scrollbar-width: none;
+        /* Firefox */
+        -ms-overflow-style: none;
+        /* IE */
+    }
+
+    .facility-tabs::-webkit-scrollbar {
+        display: none;
+        /* Chrome, Safari */
     }
 
     .tab-item {
         font-size: 12px;
         line-height: 19px;
         width: auto;
+        padding: 6px 12px;
+        flex-shrink: 0;
+        white-space: nowrap;
     }
 
     .tab-item.active {
-        font-size: 14px;
+        font-size: 13px;
+        font-weight: 700;
     }
 
     .tab-item.active::before {
-        width: 65px;
-        left: -16px;
+        width: 0;
+        display: none;
+    }
+
+    /* Tab content styling */
+    #tab-content {
+        padding: 0 4px;
+    }
+
+    .tab-pane ul {
+        padding-left: 18px;
+        margin-bottom: 10px;
+    }
+
+    .tab-pane ul li {
+        font-size: 13px;
+        line-height: 22px;
+        margin-bottom: 2px;
+    }
+
+    /* Facility bottom content */
+    .facility-bottom-content {
+        margin-top: 16px !important;
     }
 
     .read-more-btn-facility {
-        padding: 8px 48px 8px 0;
+        padding: 8px 0;
         font-size: 13px;
-    }
-
-    .image-wrapper {
-        padding-top: 28px;
-    }
-
-    .image-wrapper img {
+        justify-content: center;
         width: 100%;
-        height: auto;
-        left: 0;
-        max-width: 100%;
     }
 
+    /* Thumbs: override inline padding-left and center */
     .thumbs {
-        gap: 5px;
+        padding-left: 0 !important;
+        gap: 6px;
         flex-wrap: wrap;
         justify-content: center;
+        margin-top: 12px !important;
     }
 
     .thumb {
@@ -1683,11 +1973,32 @@
         height: 42px;
     }
 
+    /* Image section */
+    .facility-image {
+        margin-top: 8px;
+    }
+
+    .image-wrapper {
+        padding-top: 12px;
+    }
+
+    .image-wrapper img {
+        width: 100%;
+        height: auto;
+        left: 0;
+        max-width: none;
+    }
+
     .next-btn-service {
         right: 8px;
         width: 30px;
         height: 30px;
         font-size: 16px;
+    }
+
+    /* Fix the col-md-4 tab column on mobile */
+    .facility-left .col-md-4 {
+        margin-bottom: 0;
     }
 
     .wrapper {
